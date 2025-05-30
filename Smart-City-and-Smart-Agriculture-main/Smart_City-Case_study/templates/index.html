@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giám sát vi phạm</title>
+</head>
+<body>
+    <h1>Danh sách xe vi phạm</h1>
+    <a href="/download">📥 Tải báo cáo CSV</a>
+    <table border="1" cellspacing="0" cellpadding="5">
+        <tr>
+            <th>ID</th><th>Xe</th><th>Thời gian</th><th>Ảnh</th>
+        </tr>
+        {% for row in records %}
+        <tr>
+            <td>{{ row['id'] }}</td>
+            <td>{{ row['car_id'] }}</td>
+            <td>{{ row['timestamp'] }}</td>
+            <td><img src="{{ url_for('static', filename=row['image'].split('static/')[1]) }}" width="200"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
