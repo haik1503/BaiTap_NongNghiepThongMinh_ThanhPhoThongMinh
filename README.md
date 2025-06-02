@@ -1,1 +1,1 @@
-# BaiTap_NongNghiepThongMinh_ThanhPhoThongMinh
+Gioiws thieuj
